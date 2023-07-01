@@ -175,6 +175,7 @@ nav > img {
 
 .hero {
     background-color: #000;
+    overflow-x: hidden;
 }
 
 /* contains img 1 tag */
