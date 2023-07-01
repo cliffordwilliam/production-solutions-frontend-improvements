@@ -1,0 +1,659 @@
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}details,main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
+html {
+    background-color: #eee;
+}
+
+body {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+body * {
+    /* outline: 1px solid #f00; */
+    font-family: sans-serif;
+}
+
+/* MOBILE */
+
+/* Navbar
+========================================================================== */
+
+/* hold img, burg and nav menu */
+nav {
+    display: flex;
+
+    /* so nav menu can wrap under logo and burg */
+    flex-wrap: wrap;
+
+    /* looks */
+    background-color: #c30;
+}
+
+/* logo grow and shrink, max width is ori size */
+nav > img {
+    flex: 1 1 auto;
+    max-width: 198px;
+    min-width: 0;
+
+    /* pad breathing room for logo*/
+    padding: 1rem;
+
+    /* looks */
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+}
+
+/* burg v align its svg center */
+.burger-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* grow and shrink but no basis, limit width to 104px */
+    flex: 1;
+    max-width: 6.5rem;
+
+    /* push away from logo */
+    margin-left: auto;
+
+    /* looks */
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    border-left: 1px solid #c63;
+
+    /* for hover effect */
+    transition: color .15s ease-in-out, background-color .15s ease-in-out;
+}
+
+/* holds home, about us, services, ... vertically */
+.navbar-menu {
+    /* display flex toggle by burger click */
+    display: none;
+    flex-direction: column;
+
+    /* always 100% width */
+    flex: 1 1 100%;
+}
+
+/* pad breathing room for home, about us, services, ... */
+.navbar-menu > * {
+    padding: 1rem;
+
+    /* looks */
+    color: #fff;
+    text-decoration: none;
+    border-top: 1px solid #c63;
+
+    /* for hover effect */
+    transition: color .15s ease-in-out, background-color .15s ease-in-out;
+}
+
+/* hover efx on home, about us, services, ... and burg */
+.navbar-menu > *:hover, .burger-button:hover {
+    background-color: #b20;
+}
+
+/* for holding span and icon, like services + chevron */
+.icon-container {
+    display: flex;
+    align-items: stretch;
+}
+
+/* some looks better with center align */
+.icon-container.icon-align-center {
+    align-items: center;
+}
+
+/* span push right chevron */
+.icon-container > span {
+    margin-right: 0.625rem;
+}
+
+/* dont let svg shrink */
+.icon-container > svg {
+    flex-shrink: 0;
+}
+
+/* holds the icon container and serv menu */
+.services {
+    padding: 0;
+}
+
+/* acts like the other anchors, home, about us, ... */
+.services .icon-container {
+    /* pad breathing room for icon container's service + chevron */
+    padding: 1rem;
+}
+
+/* holds flowback & solids removal, well unloading & blow down, ... */
+.serv-menu {
+    z-index: 1;
+    /* display flex toggle by services click */
+    display: none;
+    flex-direction: column;
+
+    /* serv menu items are 20rem wide, need to cover the right side */
+    background-color: #fff;
+}
+
+/* pads for flowback & solids removal, well unloading & blow down, ... */
+.serv-menu > * {
+    /* breathing pads like the other anchors, home, about us, ... */
+    padding: 1rem;
+
+    /* looks */
+    background-color: #fff;
+    color: #c30;
+    text-decoration: none;
+    border-top: 1px solid #ddd;
+    /* show my right side ends */
+    border-right: 1px solid #ddd;
+
+    /* wider looks good */
+    /* this is limit, cuz default flex column item takes full width */
+    max-width: 20rem;
+
+    /* for hover effect */
+    transition: color .15s ease-in-out, background-color .15s ease-in-out;
+}
+
+/* serv menu items efx */
+.serv-menu > *:hover {
+    background-color: #eee;
+    color: #c20;
+}
+
+/* push svg to right */
+.serv-menu > .icon-container {
+    justify-content: space-between;
+}
+
+/* Hero
+========================================================================== */
+
+.hero {
+    background-color: #000;
+}
+
+/* contains img 1 tag */
+.hero-img {
+    /* anchor to hero-img-2 */
+    position: relative;
+
+    /* stay in the middle */
+    margin: 0 auto;
+
+    /* img is single tag, need to create a div that is same size as img */
+    /* this div control where the image is sticked, this one is to right side */
+    display: flex;
+    justify-content: flex-end;
+
+    /* set div size, mobile is smaller */
+    max-width: 797px;
+    height: 200px;
+}
+
+.hero-img-2 {
+    /* stick on top of hero-img-1 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    /* keep this img in center, cuz text is in center */
+    display: flex;
+    justify-content: center;
+
+    /* js will toggle fade in and out */
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+/* same but for the bottom hero */
+.bottom-hero-img {
+    /* anchor to hero-img-2 */
+    position: relative;
+
+    /* stay in the middle */
+    margin: 0 auto;
+
+    /* img is single tag, need to create a div that is same size as img */
+    /* this div control where the image is sticked, this one is to center */
+    display: flex;
+    justify-content: center;
+
+    /* set div size, mobile is smaller */
+    max-width: 797px;
+    height: 217px;
+}
+
+.bottom-hero-img-2 {
+    /* stick on top of hero-img-1 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    /* keep this img in center, cuz text is in center */
+    display: flex;
+    justify-content: center;
+
+    /* js will toggle fade in and out */
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+/* Services Cards
+========================================================================== */
+
+/* background color for serv card section */
+.serv-card-background {
+    background-color: #fff;
+
+    /* contetnt breathing room */
+    padding: 1.5rem;
+
+    /* push heading down */
+    padding-top: 5.5rem;
+}
+
+/* heading for this section */
+.serv-card-background > h2 {
+    /* center the grid in serv card section section */
+    max-width: 75rem;
+    margin: 0 auto;
+
+    /* remove default top margin */
+    margin-top: 0;
+
+    /* looks */
+    font-weight: 200;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    border-bottom: 1px solid #c30;
+
+    /* push p away */
+    margin-bottom: 3.5rem;
+}
+
+/* for mobile, pc cols are in media queries */
+.serv-card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    
+    /* center the grid in serv card section section */
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+/* holds img and text con */
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #bbb;
+    
+}
+
+/* make card height all the same */
+.card > img {
+    height: 11.25rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* holds h2, p and a */
+.card-text-con {
+    /* each card's text varies, make sure we all take full height */
+    flex-grow: 1;
+
+    /* need to flex col for a to have a working margin top auto */
+    display: flex;
+    flex-direction: column;
+
+    background-color: #eee;
+}
+
+/* breathing room */
+.card-text-con > h3 {
+    margin: 1.5rem 1.5rem 0 1.5rem;
+
+    /* remove old margin and push p down */
+    margin-bottom: 1rem;
+
+    /* looks */
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: #000;
+}
+
+/* remove old margin and push a down */
+.card-text-con > p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    color: #444;
+
+    /* breathing room */
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+/* looks for a and push p up */
+.card-text-con > a {
+    font-size: 1.25rem;
+    cursor: pointer;
+    text-decoration: none;
+
+    /* btn looks */
+    background-color: #eee;
+    color: #b20;
+
+    /* for hover effect */
+    transition: color .15s ease-in-out, background-color .15s ease-in-out;
+
+    /* only works if parent display is flex col */
+    margin-top: auto;
+
+    /* push content in for button efx */
+    padding: 0.75rem;
+
+    /* breathing room */
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    margin-bottom: 0.75rem;
+
+    /* don't take full width */
+    align-self: flex-start;
+}
+
+/* card anchor hover efx */
+.card-text-con > a:hover {
+    background-color: #ddd;
+    color: #c10;
+}
+
+/* Introduction
+========================================================================== */
+
+/* background color for intro section */
+.introcution-background {
+    background-color: #fff;
+
+    /* breathing room */
+    padding: 1.5rem;
+    
+    /* push the services card section away */
+    padding-top: 4rem;
+}
+
+/* breathing room */
+.introduction-container {
+    /* keep me centered in body */
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+/* remove old top margin */
+.introduction-container > h2 {
+    /* remove default top margin */
+    margin-top: 0;
+
+    /* push p away */
+    margin-bottom: 1.5rem;
+
+    font-weight: 200;
+    font-size: 2.5rem;
+    line-height: 1.2;
+
+    border-bottom: 1px solid #c30;
+}
+
+/* change to better line height */
+.introduction-container > p {
+    /* remove default top margin */
+    margin-top: 0;
+
+    /* push other p away */
+    margin-bottom: 1.25rem;
+
+    line-height: 1.75;
+}
+
+/* Hero bottom
+========================================================================== */
+.hero.bottom {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: #fff;
+}
+
+/* Footer
+========================================================================== */
+footer {
+    background-color: #c30;
+    color: #fff;
+}
+
+footer a {
+    display: block;
+    color: #fff;
+}
+
+.footer-container {
+    padding: 1.5rem;
+    
+    /* push the services card section away */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    
+    /* keep me centered in body */
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+/* Serv Hero
+========================================================================== */
+
+/* breathing room */
+.hero-text-con {
+    padding: 1.5rem;
+
+    /* push nav away */
+    padding-top: 3.5rem;
+
+    /* looks */
+    text-align: center;
+}
+
+/* h1 looks */
+.hero-text-con > h1 {
+    color: #800;
+    font-size: 3.5rem;
+    font-weight: 200;
+
+    /* remove default margin */
+    margin: 0;
+    
+    /* push p down */
+    margin-bottom: 1.5rem;
+}
+
+/* remove old margin */
+.hero-text-con > p {
+    margin: 0;
+
+    /* looks */
+    color: #444;
+
+    /* push anchor down */
+    margin-bottom: 3rem;
+}
+
+/* push svg arrow away in mobile */
+.hero-text-con > a {
+    justify-content: space-between;
+
+    /* looks */
+    text-decoration: none;
+    background-color: #c30;
+    color: #fff;
+
+    /* breathing room */
+    padding: 1rem 2rem;
+
+    /* for hover effect */
+    transition: color .15s ease-in-out, background-color .15s ease-in-out;
+}
+
+/* anchor hover efx */
+.hero-text-con > a:hover {
+    background-color: #b20;
+}
+
+/* mobile img is 300px tall */
+.serv-hero > img {
+    height: 300px;
+
+    /* remove new line space */
+    display: block;
+
+    /* so that the padding in 100% is counted */
+    box-sizing: border-box;
+    width: 100%;
+
+    /* breathing room */
+    padding: 1.5rem;
+
+    /* cover empty sides */
+    background-color: #fff;
+
+    /* keep img in 300px */
+    object-fit: contain;
+}
+
+/* Content
+========================================================================== */
+
+.content {
+    background-color: #fff;
+
+    /* breathing room */
+    padding: 1.5rem;
+    
+    /* push the hero away */
+    padding-top: 4rem;
+}
+
+/* breathing room */
+.content-container {
+    /* keep me centered in body */
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.content.last {
+    /* push footer away */
+    padding-bottom: 5rem;
+}
+
+.content-container h2 {
+    /* remove default top margin */
+    margin-top: 0;
+
+    /* push p away */
+    margin-bottom: 1.5rem;
+
+    font-weight: 200;
+    font-size: 2.5rem;
+    line-height: 1.2;
+
+    border-bottom: 1px solid #c30;
+}
+
+.content-container p {
+    /* remove default top margin */
+    margin-top: 0;
+
+    /* push other p away */
+    margin-bottom: 1.25rem;
+
+    line-height: 1.75;
+}
+
+.content-container ul {
+    padding-left: 1.5rem;
+}
+
+.content-container ul > li {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    margin: 0.5rem 0;
+}
+
+/* Split
+========================================================================== */
+.text-img-con {
+    display: grid;
+    gap: 1rem;
+    grid-template: auto 20vh / 1fr;
+}
+.text-img-con > img {
+    height: 0;
+    width: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+/* contact */
+input {
+    padding: .375rem .75rem;
+}
+
+.input-container {
+    margin-bottom: 1rem;
+}
+
+.input-container > label {
+    display: block;
+}
+
+.btn {
+    border: none;
+    color: #fff;
+    background-color: #c30;
+    padding: 1rem 2rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.btn:hover {
+    background-color: #b20;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 3rem;
+}
+
+.contact-grid h3{
+    margin: 0;
+    margin-bottom: .5rem;
+}
+
+.contact-grid p{
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.agreement-text {
+    max-width: 20rem;
+}

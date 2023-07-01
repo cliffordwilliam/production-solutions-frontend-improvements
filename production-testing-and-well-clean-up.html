@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production Testing & Well Clean Up | Production Solutions (Thailand) Ltd</title>
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/queries.css">
+    <style>
+        /* highlights current page serv menu item */
+        .serv-menu > *:nth-child(4) {
+            background-color: #eee;
+            color: #c20;
+        }
+        
+        @media (min-width: 75rem){
+            /* PC */
+
+            /* Navbar
+            ========================================================================== */
+
+            /* pc highlights current page */
+
+            /* for home page */
+            .navbar-menu > *:nth-child(3) {
+                /* highlight home in nav menu */
+                background-color: #fff;
+                color: #b20;
+            }
+
+            /* for home page */
+            .navbar-menu > *:nth-child(3):hover {
+                /* home in nav menu hover efx */
+                background-color: #eee;
+                color: #c10;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header>
+        <nav>
+            <img src="./assets/logo.png" alt="logo">
+            <div class="burger-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </div>
+            <div class="navbar-menu">
+                <a href="./index.html">Home</a>
+                <a href="./about-us.html">About Us</a>
+                <div class="services">
+                    <div class="icon-container">
+                        <span>Services</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </div>
+                    <div class="serv-menu">
+                        <a href="./flowback-and-solids-removal.html" class="icon-container">
+                            <span>Flowback & Solids Removal</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </a>
+                        <a href="./well-unloading-and-blow-down.html" class="icon-container">
+                            <span>Well Unloading & Blow Down</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </a>
+                        <a href="./gas-compression.html" class="icon-container">
+                            <span>Gas Compression</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="icon-container">
+                            <span>Production Testing & Well Clean Up</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </a>
+                        <a href="./rig-cooling-system.html" class="icon-container">
+                            <span>Rig Cooling System</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </a>
+                        <a href="./water-injection-and-pumping.html" class="icon-container">
+                            <span>Water Injection (SWIMS & PRISM)</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </a>
+                        <a href="./hydrocyclone-desanders-deoilers.html" class="icon-container">
+                            <span>Hydrocyclone - Desanders & Deoilers</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </a>
+                        <a href="./chemical-injection-system.html" class="icon-container">
+                            <span>Chemical Injection System</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </a>
+                        <a href="frac-tree-systems.html" class="icon-container">
+                            <span>Frac Tree Systems</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </a>
+                        <a href="high-pressure-piping-and-valving.html" class="icon-container">
+                            <span>High Pressure Piping & Valving</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </a>
+                        <a href="flowline-safety-restraint-system.html" class="icon-container">
+                            <span>Flowline Safety Restraint System</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </a>
+                        <a href="electronic-data-acquisition-system.html" class="icon-container">
+                            <span>Electronic Data Acquisition System</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <a href="./equipment-rental.html">Equipment Rental / Sales</a>
+                <a href="./qhse.html">QHSE</a>
+                <a href="./contact-us.html">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="serv-hero">
+            <div class="hero-text-con">
+                <h1>Production Testing & Well Clean Up</h1>
+                <p>Test wells to determine its flow capacity at specific conditions of reservoir and flowing pressures</p>
+                <a href="#" class="icon-container icon-align-center">
+                    <span>Contact Us</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                    </svg>
+                </a>
+            </div>
+            <img src="./assets/Vertical-Seperator3-742x1024.jpg" alt="">
+        </section>
+
+        <!-- CONTENT -->
+        <section class="content last">
+            <div class="content-container">
+                <h2>Objective</h2>
+                <p>
+                    Test wells to determine its flow capacity at specific conditions of reservoir and flowing pressures. Flow potential, annular pressure, critical flow rate, net gas production and water/oil ratio. We can offer mini well test separator for spot check of existing wells or larger package for well clean up after drilling campaign (Rigless).
+                </p>
+                <p>
+                    Production Solutions offer Clean-up packages which includes surface production equipment and pre-production, high rate gas flow rate measurement, water handling and treatment & solids handling systems.
+                </p>
+                <p>
+                    Well Testing is used to determine the flow capacity at specific conditions of reservoir and flowing pressures. Flow potential, annular pressure, critical flow rate, net gas production and water/oil ratio are determined.
+                </p>
+                <p>
+                    Equipment Available:
+                </p>
+                <ul>
+                    <li>Separators</li>
+                    <li>Flare Booms</li>
+                    <li>Choke Manifolds</li>
+                    <li>Data Acquisition System</li>
+                    <li>Pipework</li>
+                    <li>Laboratory Equipment</li>
+                    <li>Flare Stacks</li>
+                    <li>ESD Systems</li>
+                    <li>Gas Buster Tanks</li>
+                    <li>Surge Tanks</li>
+                </ul>
+                <p>
+                    Production Solutions ensure:
+                </p>
+                <ul>
+                    <li>Reliability</li>
+                    <li>Data quality to attain test objectives</li>
+                    <li>Flexibility for varying reservoir characteristics</li>
+                    <li>Well Test Design Review as per API RP 14 C (Surface Safety Systems)</li>
+                    <li>Emergency Shut Down (ESD) system design</li>
+                    <li>Monitoring Well Parameters – e.g. P, T, Q, H2S etc.</li>
+                    <li>ESD Production Shut Down Valves, ESD Buttons, Lo/Hi Pilots</li>
+                    <li>Pressure Safety Relieve Valves Protect lines with Working Pressure < Shut In Pressure</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-container">
+                <p>
+                    Production Solutions Asia Pacific, 1 Coleman Street, #10-01 The Adelphi, Singapore 179803
+                </p>
+                <p>
+                    © 2013 Production Solution Asia Pacific. All Rights Reserved.
+                </p>
+                <p><a href="#">
+                    Website Development by CMYK [Group] in Bangkok, ThailandWebsite Development by CMYK [Group] in Bangkok, Thailand
+                </p></a>
+                <p><a href="#">
+                    Search Engine Optimization by CMYK [SEO] in Bangkok, ThailandSearch Engine Optimization by CMYK [SEO] in Bangkok, Thailand
+                </p></a>
+            </div>
+        </footer>
+    </main>
+
+    <script src="./js/navbar.js"></script>
+</body>
+</html>

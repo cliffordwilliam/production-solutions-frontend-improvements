@@ -1,0 +1,167 @@
+@media (min-width: 36rem){
+}
+@media (min-width: 48rem){
+    /* PC */
+
+    /* Serv Hero
+    ========================================================================== */
+
+    /* hero is always 700px tall */
+    .serv-hero {
+        height: 700px;
+
+        /* remove mobile push nav pads */
+        padding-top: 0;
+
+        /* contains the text-con and img */
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* grow as much as 50% */
+    .hero-text-con {
+        flex: 1;
+        max-width: 50%;
+
+        /* center my texts */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* grow as much as 50% */
+    .serv-hero > img {
+        flex: 1;
+        max-width: 50%;
+
+        /* remove mobile height setting */
+        height: auto;
+    }
+}
+@media (min-width: 62rem){
+    /* Serv card grid
+    ========================================================================== */
+
+    /* 2 col */
+    .serv-card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 75rem){
+    /* PC */
+
+    /* Navbar
+    ========================================================================== */
+
+    /* hold img, burg and menu */
+    nav {
+        /* prevent nav menu to go under */
+        flex-wrap: nowrap;
+
+        /* in pc the orange is the top aligned nav menu */
+        background-color: #fff;
+    }
+
+    /* logo do not grow pr shrink */
+    nav > img {
+        flex: 0 0 auto;
+    }
+
+    /* no burger */
+    .burger-button {
+        display: none;
+    }
+    
+    /* hold home, about us, services, ... horizontally */
+    .navbar-menu {
+        display: flex;
+        flex-direction: row;
+
+        /* put self on top */
+        align-self: flex-start;
+
+        /* im always 100% width, i am the orange color */
+        background-color: #c30;
+    }
+
+    /* border right instead top */
+    .navbar-menu > * {
+        border-top: none;
+        border-right: 1px solid #c63;
+    }
+
+    /* acts as anchor to .serv-menu */
+    .services {
+        position: relative;
+        cursor: pointer;
+    }
+
+    /* follows anchor */
+    .serv-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        min-width: 20rem;
+
+        /* looks */
+        box-shadow: 0 2px 4px #777;
+        /* remove mobile white cover */
+        background-color: transparent;
+    }
+
+    /* remove right border of mobile, seperates 20rem */
+    .serv-menu > * {
+        border-right: none;
+    }
+
+    .serv-menu > *:first-child {
+        /* remove -> mobile push up services icon container */
+        margin-top: 0;
+    }
+
+    .serv-menu > .icon-container {
+        justify-content: space-between;
+    }
+
+    /* Hero
+    ========================================================================== */
+
+    /* set div size bigger for pc */
+    .hero-img {
+        max-width: 1200px;
+        height: auto;
+    }
+
+    .bottom-hero-img {
+        max-width: 1200px;
+        height: auto;
+    }
+
+    /* Split
+    ========================================================================== */
+
+    .text-img-con {
+        grid-template: 1fr / 1fr 1fr;
+    }
+
+    /* Contact
+    ========================================================================== */
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width: 87.5rem){
+    /* Serv card grid
+    ========================================================================== */
+    
+    /* 4 col */
+    .serv-card-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
